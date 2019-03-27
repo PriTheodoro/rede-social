@@ -14,14 +14,10 @@
 </head>
 <body>
     <div class="container">
-    <!-- Trigger the modal with a button -->
-    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Cadastre-se</button>
-
-    <!-- Modal -->
+    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">Cadastre-se</button>
+    <button type="button" class="btn btn-info" id="sign-in-google">Entre com Google</button>
     <div class="modal fade" id="myModal" role="dialog">
       <div class="modal-dialog">
-      
-        <!-- Modal content-->
         <div class="modal-content">
           <div class="modal-header">
             <h4 class="modal-title">Cadastre-se</h4>
@@ -30,23 +26,42 @@
           <div class="modal-body">
               <form>
                   <div class="form-group">
-                    <label for="exampleInputEmail1">Email</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="usuário@email.com">
-                    <small id="emailHelp" class="form-text text-muted">Nós não compartilharemos sua senha com ninguém.</small>
+                    <label for="name-input">Nome</label>
+                    <input type="text" class="form-control" id="name-input">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputPassword1">Senha</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="********">
+                      <label for="age-input">Data de Nascimento</label>
+                      <input type="date" class="form-control" id="age-input">
                   </div>
-                  <button type="submit" class="btn btn-primary">Cadastrar</button>
+                  <div class="form-group">
+                      <label for="se-input">Sexo</label>
+                      <select id="age-input">
+                      <option value="Female">Feminino</option>
+                      <option value="Male">Masculino</option>
+                      <option value="Other">Outro</option>
+                      </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="email-input">Email</label>
+                    <input type="email" class="form-control" id="email-input" aria-describedby="emailHelp" placeholder="usuário@email.com">
+                    <small id="emailHelp" class="form-text text-muted">Nós não compartilharemos suas informações com ninguém.</small>
+                  </div>
+                  <div class="form-group">
+                    <label for="password-input0">Senha</label>
+                    <input type="password" class="form-control" id="password-input0" placeholder="********">
+                  </div>
+                  <div class="form-group">
+                      <label for="password-input">Confirme sua senha</label>
+                      <input type="password" class="form-control" id="password-input" placeholder="********">
+                      <small id="passwordHelp" class="form-text text-muted"></small>
+                    </div>
+                  <button type="button" id="sign-up-btn" class="btn btn-primary">Cadastrar</button>
                 </form>
-
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
           </div>
         </div>
-        
       </div>
     </div>
     
