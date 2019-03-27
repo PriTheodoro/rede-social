@@ -2,14 +2,72 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="./src/style.css" />
-    <script src="./src/script.js"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <title>Document</title>
+    <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-database.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="./src/config.js"></script>
+    <link rel="stylesheet" href="./src/style.css" />
 </head>
 <body>
+    <div class="container">
+    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">Cadastre-se</button>
+    <button type="button" class="btn btn-info" id="sign-in-google">Entre com Google</button>
+    <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Cadastre-se</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-body">
+              <form>
+                  <div class="form-group">
+                    <label for="name-input">Nome</label>
+                    <input type="text" class="form-control" id="name-input">
+                  </div>
+                  <div class="form-group">
+                      <label for="age-input">Data de Nascimento</label>
+                      <input type="date" class="form-control" id="age-input">
+                  </div>
+                  <div class="form-group">
+                      <label for="se-input">Sexo</label>
+                      <select id="age-input">
+                      <option value="Female">Feminino</option>
+                      <option value="Male">Masculino</option>
+                      <option value="Other">Outro</option>
+                      </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="email-input">Email</label>
+                    <input type="email" class="form-control" id="email-input" aria-describedby="emailHelp" placeholder="usuário@email.com">
+                    <small id="emailHelp" class="form-text text-muted">Nós não compartilharemos suas informações com ninguém.</small>
+                  </div>
+                  <div class="form-group">
+                    <label for="password-input0">Senha</label>
+                    <input type="password" class="form-control" id="password-input0" placeholder="********">
+                  </div>
+                  <div class="form-group">
+                      <label for="password-input">Confirme sua senha</label>
+                      <input type="password" class="form-control" id="password-input" placeholder="********">
+                      <small id="passwordHelp" class="form-text text-muted"></small>
+                    </div>
+                  <button type="button" id="sign-up-btn" class="btn btn-primary">Cadastrar</button>
+                </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+          </div>
+        </div>
+      </div>
+    </div>
     
+  </div>
+
+  <script src="./src/script.js"></script>
+  <script src="./src/auth.js"></script>
 </body>
 </html>
