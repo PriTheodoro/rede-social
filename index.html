@@ -24,8 +24,6 @@
     <button type="button" class="btn btn-info" id="sign-in-google-btn"><i class="fab fa-google-plus-g"></i></button>
     <button type="button" class="btn btn-info" id="sign-in-facebook-btn"><i class="fab fa-facebook-square"></i></button>
     <button type="button" class="btn btn-info" id="sign-in-twitter-btn"><i class="fab fa-twitter-square"></i></button>
-   
-    
     <div class="modal fade" id="myModal" role="dialog">
       <div class="modal-dialog">
         <div class="modal-content">
@@ -34,40 +32,39 @@
             <button type="button" class="close" data-dismiss="modal">&times;</button>
           </div>
           <div class="modal-body">
-            <form>
-              <div class="form-group">
-                <label for="name-input">Nome</label>
-                <input type="text" class="form-control" id="name-input">
-              </div>
-              <div class="form-group">
-                <label for="age-input">Data de Nascimento</label>
-                <input type="date" class="form-control" id="age-input">
-              </div>
-              <div class="form-group">
-                <label for="se-input">Sexo</label>
-                <select id="age-input">
-                  <option value="Female">Feminino</option>
-                  <option value="Male">Masculino</option>
-                  <option value="Other">Outro</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label for="email-input">Email</label>
-                <input type="email" class="form-control" id="email-input" aria-describedby="emailHelp" placeholder="usuário@email.com">
-                <small id="emailHelp" class="form-text text-muted">Nós não compartilharemos suas informações com
-                  ninguém.</small>
-              </div>
-              <div class="form-group">
-                <label for="password-input0">Senha</label>
-                <input type="password" class="form-control" id="password-input0" placeholder="********">
-              </div>
-              <div class="form-group">
-                <label for="password-input">Confirme sua senha</label>
-                <input type="password" class="form-control" id="password-input" placeholder="********">
-                <small id="passwordHelp" class="form-text text-muted"></small>
-              </div>
-              <button type="button" id="sign-up-btn" class="btn btn-primary">Cadastrar</button>
-            </form>
+              <form>
+                  <div class="form-group">
+                    <label for="name-input">Nome</label>
+                    <input type="text" class="form-control" id="name-input">
+                  </div>
+                  <div class="form-group">
+                      <label for="age-input">Data de Nascimento</label>
+                      <input type="date" class="form-control" id="age-input">
+                  </div>
+                  <div class="form-group">
+                      <label for="gender-input">Gênero</label>
+                      <select id="gender-input">
+                      <option value="Female">Feminino</option>
+                      <option value="Male">Masculino</option>
+                      <option value="Other">Outro</option>
+                      </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="email-input">Email</label>
+                    <input type="email" class="form-control" id="email-input" aria-describedby="emailHelp" placeholder="usuário@email.com">
+                    <small id="emailHelp" class="form-text text-muted">Nós não compartilharemos suas informações com ninguém.</small>
+                  </div>
+                  <div class="form-group">
+                    <label for="password-input0">Senha</label>
+                    <input type="password" class="form-control" id="password-input0" placeholder="********">
+                  </div>
+                  <div class="form-group">
+                      <label for="password-input">Confirme sua senha</label>
+                      <input type="password" class="form-control" id="password-input" placeholder="********">
+                      <small id="passwordHelp" class="form-text"></small>
+                    </div>
+                  <button type="button" id="sign-up-btn" class="btn btn-primary">Cadastrar</button> <small id="cadHelp" class="form-text text-muted"></small>
+                </form>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
