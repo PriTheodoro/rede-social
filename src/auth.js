@@ -25,7 +25,6 @@ $(document).ready(function () {
     }
   
   })
-    });
     $("#sign-in-emailAndPassword-btn").click(function (event) {
         event.preventDefault();
         let userEmail = $("#emailInput").val();
