@@ -1,21 +1,29 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-    <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-database.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <script src="./src/config.js"></script>
-    <link rel="stylesheet" href="./src/style.css" />
+  <meta charset="UTF-8">
+  <title>Viaje!</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="./src/style.css"/>
 </head>
+
 <body>
-    <div class="container">
+  <div class="container">
+    <label for="emailInput">Email</label>
+    <input type="email" id="emailInput">
+    <label for="passwordInput">Senha</label>
+    <input type="password" id="passwordInput">
+    <p><small> Esqueceu sua senha?</small></p>
+    <button type="button" class="btn btn-info" id="sign-in-emailAndPassword-btn">Entrar</button>  
+    <p>Ainda não se cadastrou?</p>
     <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">Cadastre-se</button>
-    <button type="button" class="btn btn-info" id="sign-in-google">Entre com Google</button>
+    <p>OU</p>
+    <button type="button" class="btn btn-info" id="sign-in-google-btn"><i class="fab fa-google-plus-g"></i></button>
+    <button type="button" class="btn btn-info" id="sign-in-facebook-btn"><i class="fab fa-facebook-square"></i></button>
+    <button type="button" class="btn btn-info" id="sign-in-twitter-btn"><i class="fab fa-twitter-square"></i></button>
     <div class="modal fade" id="myModal" role="dialog">
       <div class="modal-dialog">
         <div class="modal-content">
@@ -64,10 +72,17 @@
         </div>
       </div>
     </div>
-    
+
   </div>
 
+  <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-database.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="./src/config.js"></script>
   <script src="./src/script.js"></script>
   <script src="./src/auth.js"></script>
 </body>
+
 </html>

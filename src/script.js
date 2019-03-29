@@ -1,3 +1,4 @@
+
 function writeUserData(userId, displayName, photoUrl, age, gender){
     firebase.database().ref('users/' + userId).set({
         'displayName': displayName,
