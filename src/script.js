@@ -8,7 +8,7 @@ function writeUserData(userId, displayName, photoUrl, age, gender){
     })
 }
 
-function writeUserDataGoogle(userId, displayName, photoUrl){
+function writeUserDataSM(userId, displayName, photoUrl){
     firebase.database().ref('users/' + userId).set({
         'displayName': displayName,
         'photoUrl' : photoUrl,

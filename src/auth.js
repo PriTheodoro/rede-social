@@ -59,14 +59,14 @@ $(document).ready(function () {
         })
 
 
-$("#sign-in-google").click(function(){
+$("#sign-in-google-btn").click(function(){
         let provider = new firebase.auth.GoogleAuthProvider();
     
         firebase.auth().signInWithPopup(provider).then(function(result) {
          // window.location = "profile.html"
          console.log("Logado com Google");
          console.log(result) 
-         writeUserDataGoogle(result.user.uid, result.additionalUserInfo.profile.given_name, result.additionalUserInfo.profile.picture)
+         writeUserDataSM(result.user.uid, result.additionalUserInfo.profile.given_name, result.additionalUserInfo.profile.picture)
          let token = result.credential.accessToken;
          let user = result.user;
     
@@ -85,7 +85,7 @@ $("#sign-in-facebook-btn").click(function () {
         window.location = ""
         console.log("Logado com Facebook");
         console.log(result)
-        writeUserData(result.additionalUserInfo.profile.id, result.additionalUserInfo.profile.given_name, result.additionalUserInfo.profile.picture)
+        writeUserDataSM(result.additionalUserInfo.profile.id, result.additionalUserInfo.profile.given_name, result.additionalUserInfo.profile.picture)
         let token = result.credential.accessToken;
         let user = result.user;
 
@@ -104,7 +104,7 @@ $("#sign-in-twitter-btn").click(function () {
         window.location = ""
         console.log("Logado com Twitter");
         console.log(result)
-        writeUserData(result.additionalUserInfo.profile.id, result.additionalUserInfo.profile.given_name, result.additionalUserInfo.profile.picture)
+        writeUserDataSM(result.additionalUserInfo.profile.id, result.additionalUserInfo.profile.given_name, result.additionalUserInfo.profile.picture)
         let token = result.credential.accessToken;
         let user = result.user;
 
