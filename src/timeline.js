@@ -2,7 +2,7 @@ $(document).ready(function(){
     $("#post-message-button").click(function(event){
         event.preventDefault();
         let input = $("#input-post").val();
-        $("#post-list").append(`<li><div>${input}</li></li>`);
+        $("#post-list").prepend(`<li><div>${input}</li></li>`);
         function divClicked() {
             var divHtml = $(this).html();
             var editableText = $("<textarea />");
