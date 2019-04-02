@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-database.js"></script>
+    <link rel="stylesheet" href="src/style.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <nav class="user-nav">
+        <div id="user-image"></div>
+        <div id="user-name"></div>
+    </nav>
+
+   <form>
+       <textarea name="input-post" id="input-post" cols="50" rows="10" placeholder="Fez alguma viagem? Conte-nos!"></textarea>
+       <select name="privacy" id="privacy">
+           <option value="friends">Amigos</option>
+           <option value="user">Qualquer usuário</option>
+       </select>
+       <select name="post-friends" id="post-friends">
+       </select>
+       <input type="file" placeholder="Foto / Vídeo" id="include-button">
+       <input type="submit" value="Publicar" id="post-message-button">
+   </form>
+
+   <ul id="post-list"></ul>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <script src="src/timeline.js"></script>
+</body>
+</html>
