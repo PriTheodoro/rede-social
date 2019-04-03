@@ -1,18 +1,3 @@
-function writeUserData(userId, displayName, photoUrl, age, gender){
-  firebase.database().ref('users/' + userId).set({
-      'displayName': displayName,
-      'photoUrl' : photoUrl,
-      'age' : age,
-      'gender' : gender
-  })
-}
-function writeUserDataSM(userId, displayName, photoUrl){
-  firebase.database().ref('users/' + userId).set({
-      'displayName': displayName,
-      'photoUrl' : photoUrl
-  })
-}
-
 $(document).ready(function () {
   $("#sign-up-btn").click(function(event){
     event.preventDefault();
@@ -26,8 +11,7 @@ $(document).ready(function () {
     if(password === passwordConfirm){
       firebase.auth().createUserWithEmailAndPassword(email, passwordConfirm)
       .then(function(result){
-        writeUserData(result.user.uid, name, picture, age, gender)
-        window.location = "profile.html?id=" + result.user.uid;
+        writeUserData(result.user.uid, name, picture, age, gender);
       })
       .catch(function(error) {
         $("#cadHelp").html(error.message);
@@ -44,42 +28,53 @@ $(document).ready(function () {
       window.location = "profile.html?id=" + result.user.uid;
     })
     .catch(function (error) {
-      console.log(error.code, error,message)
+      console.log(error.code, error.message)
     });
   });
   $("#sign-in-google-btn").click(function(){
     let provider = new firebase.auth.GoogleAuthProvider();
-    firebase.auth().signInWithPopup(provider)
-    .then(function(result){
-      console.log(result);
-      writeUserDataSM(result.user.uid, result.additionalUserInfo.profile.given_name, result.additionalUserInfo.profile.picture);
-      window.location = "profile.html?id=" + result.user.uid;
-    }).catch(function(error){
-      console.log(error.code, error.message);
-    });
+    signInSM(provider);
   })
   $("#sign-in-facebook-btn").click(function () {
     let provider = new firebase.auth.FacebookAuthProvider();
-    firebase.auth().signInWithPopup(provider)
-    .then(function(result){
-      writeUserDataSM(result.user.uid, result.additionalUserInfo.profile.given_name, result.additionalUserInfo.profile.picture);
-      window.location = "profile.html?id=" + result.user.uid;
-    }).catch(function(error){
-      console.log(error.code, error.message);
-    });
+    signInSM(provider);
   });   
   $("#sign-in-twitter-btn").click(function () {
     let provider = new firebase.auth.TwitterAuthProvider();
+    signInSM(provider);
+  });   
+  function signInSM(provider){
     firebase.auth().signInWithPopup(provider)
     .then(function(result){
-      writeUserDataSM(result.user.uid, result.additionalUserInfo.profile.given_name, result.additionalUserInfo.profile.picture);
-      window.location = "profile.html?id=" + result.user.uid;
+      let userId = result.user.uid;
+      let givenName = result.additionalUserInfo.profile.given_name;
+      let picture = result.additionalUserInfo.profile.picture;
+      result.additionalUserInfo.isNewUser === false ? window.location = "profile.html?id=" + userId : writeUserDataSM(userId, givenName, picture);
     }).catch(function(error){
       console.log(error.code, error.message);
     });
-  });   
+  }
+  function writeUserData(userId, displayName, photoUrl, age, gender){
+    firebase.database().ref('users/' + userId).set({
+        'displayName': displayName,
+        'photoUrl' : photoUrl,
+        'age' : age,
+        'gender' : gender
+    })
+    .then(function(){
+     window.location = "profile.html?id=" + userId;
+    })
+  }
+  function writeUserDataSM(userId, displayName, photoUrl){
+    firebase.database().ref('users/' + userId).set({
+        'displayName': displayName,
+        'photoUrl' : photoUrl
+    })
+    .then(function(){
+      window.location = "profile.html?id=" + userId;
+    })
+  }
   $("#password-input").keyup(function(){
-    console.log("oi")
     let password = $("#password-input0").val()
     let passwordConfirm = $("#password-input").val()
     if(password === passwordConfirm){
