@@ -1,4 +1,4 @@
-$(document).ready(function(){
+/*$(document).ready(function(){
     $("#post-message-button").click(function(event){
         event.preventDefault();
         let input = $("#input-post").val();
@@ -24,4 +24,4 @@ $(document).ready(function(){
         $("div").click(divClicked);
     });
 });
-
+*/
