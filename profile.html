@@ -1,36 +1,35 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <title>Viaja!</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-database.js"></script>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-    crossorigin="anonymous">
+  <meta charset="UTF-8">
+  <title>Viaja!</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-database.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+  crossorigin="anonymous">
 </head>
 <body>
-    <p> Vamos viajar?</p>
-    
-    <form>
-        <textarea name="input-post" id="input-post" cols="50" rows="10" placeholder="Fez alguma viagem? Conte-nos!"></textarea>
-        <select name="privacy" id="privacy">
-            <option value="friends">Amigos</option>
-            <option value="user">Qualquer usuário</option>
-        </select>
-        <select name="post-friends" id="post-friends">
-        </select>
-        <input type="file" placeholder="Foto/Vídeo" id="include-button">
-        <input type="submit" value="Publicar" id="post-message-button">
-    </form>
-    
-    <ul id="post-list"></ul>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-    <script src="./src/config.js"></script>
-    <script src="./src/timeline.js"></script>
-    <script src="./src/script.js"></script>
-    <link rel="stylesheet" href="./src/style.css" />
+  <p> Vamos viajar?</p>
+  <form>
+    <textarea name="input-post" id="input-post" cols="50" rows="10" placeholder="Fez alguma viagem? Conte-nos!"></textarea>
+    <select name="privacy" id="privacy">
+      <option value="friends">Amigos</option>
+      <option value="user">Qualquer usuário</option>
+    </select>
+    <select name="post-friends" id="post-friends">
+    </select>
+    <input type="file" placeholder="Foto/Vídeo" id="include-button">
+    <input type="submit" value="Publicar" disabled id="post-message-button">
+  </form>
+  <ul id="post-list" class="list-unstyled"></ul>
+  
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <script src="./src/config.js"></script>
+  <script src="./src/timeline.js"></script>
+  <script src="./src/script.js"></script>
+  <link rel="stylesheet" href="./src/style.css" />
 </body>
 </html>
