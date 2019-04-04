@@ -21,15 +21,21 @@
   <form>
     <textarea name="input-post" id="input-post" cols="50" rows="10" placeholder="Fez alguma viagem? Conte-nos!"></textarea>
     <select name="privacy" id="privacy">
-      <option value="friends">Amigos</option>
-      <option value="user">Qualquer usuário</option>
+      <option value="Privado">Privado</option>
+      <option value="Publico">Público</option>
     </select>
     <select name="post-friends" id="post-friends">
     </select>
     <input type="file" placeholder="Foto/Vídeo" id="include-button">
     <input type="submit" value="Publicar" disabled id="post-message-button">
   </form>
-  <ul id="post-list" class="list-unstyled"></ul>
+  <span>Filtrar postagens:</span>
+  <select id="filter-privacy">
+    <option value="Publico">Público</option>
+    <option value="Privado">Privado</option>
+  </select>
+  <ul id="post-list" class="list-unstyled">
+  </ul>
   
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
   <script src="./src/config.js"></script>
