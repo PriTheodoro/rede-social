@@ -1,8 +1,6 @@
 body{
     margin: 0;
     padding: 0;
-    background-image: url(/image/Bckg\ rs.png);
-    background-size: 100%;
 }
 
 .red{
@@ -11,6 +9,13 @@ body{
 
 .blue{
     color: blue;
+}
+
+.boxContainer{
+    width: 1354px;
+    height: 600px;
+    background-image: url(/image/Bckg\ rs.png);
+    background-size: 100%;
 }
 
 input, button{
@@ -31,7 +36,7 @@ img{
     align-self: end;
 }
 
-.textSign h4::before{
+.textSign h5::before{
     content:'\f1d8';
     font-family: 'Font Awesome 5 Free';
     font-weight: 100;
