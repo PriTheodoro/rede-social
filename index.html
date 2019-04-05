@@ -15,7 +15,8 @@
 </head>
 
 <body>
-  <div class="container.fluid" style="height: 600px">
+  <section class="boxContainer">
+  <div class="container.fluid" >
     <div class="row">
       <div class="col-md-4 col-xs-12">
         <img src="https://media.giphy.com/media/5YgoGEKLl89jykcA9N/giphy.gif"></img>
@@ -23,14 +24,15 @@
       <div class="col-md-8 col-xs-12">
         <section class="textSign">
           <h1>Viaje!</h1>
-          <h4> Conte sua história de viagem ou receba dicas!</h4>
-          <h4> Encontre pessoas que gostam de viajar!</h4>
-          <h4> Descubra lugares para sua próxima viajem! </h4>
+          <h5> Conte sua história de viagem ou receba dicas!</h5>
+          <h5> Encontre pessoas que gostam de viajar!</h5>
+          <h5> Descubra lugares para sua próxima viajem! </h5>
         </section>
         <section class="inputSign">
+
           <input type="email" class="form-control-lg" id="emailInput" placeholder="Email">
-          <input style=margin-bottom:0px type="password" class="form-control-lg" id="passwordInput" placeholder="Senha">
-          <a style=margin-bottom:20px type="link" href="recuperar-senha.html"><small> Esqueci minha senha</small></a>
+          <input type="password" class="form-control-lg" id="passwordInput" placeholder="Senha">
+          <a type="link" href="recuperar-senha.html"><small> Esqueci minha senha</small></a>
           <p>ENTRAR <button type="submit" class="btn btn-secundary btn-lg " id="sign-in-emailAndPassword-btn"><i
                 class="fas fa-greater-than"></i></button></p>
           <p>Ainda não tem conta?  <button type="button" class="btn btn-md btn-secundary" data-toggle="modal"
@@ -38,12 +40,12 @@
           <h5>ou entre com</h5>
         </section>
         <section class="socialBtns">
-          
             <button type="button" class="btn btn-lg btn-secundary" id="sign-in-google-btn"><i class="fab fa-google-plus-g"></i></button>
             <button type="button" class="btn btn-lg btn-secundary" id="sign-in-facebook-btn"><i class="fab fa-facebook-square"></i></button>
             <button type="button" class="btn btn-lg btn-secundary" id="sign-in-twitter-btn"><i class="fab fa-twitter-square"></i></button>
           </div>
         </section>
+      </section>
       </div>
     </div>
   </div>
