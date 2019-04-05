@@ -6,3 +6,33 @@
     color: blue;
 }
 
+.like__btn {
+    border: none;
+    background-color: #e74c3c;
+    color: white;
+    cursor: pointer;
+    padding: 0.8rem;
+    border-radius: 0.4rem;
+    max-width: 200px;
+    transition: all ease 0.3s;
+    display: flex;
+    align-items: center;
+}
+
+.like__btn:hover{
+    background-color: rgba(#e74c3c, 0.8);
+}
+
+.like__btn:disabled{
+    background-color: #d4cfcf;
+    cursor: pointer;
+}
+
+.like__icon {
+    font-size: 1.2rem;
+    margin-right: 0.3rem;
+  }
+  
+.like__number {
+    font-size: 0.8rem;
+}
