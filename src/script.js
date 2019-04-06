@@ -73,3 +73,4 @@ function sendAndCreateData(event){
   $('#input-post').val("");
   postDisabled();
 }
+
