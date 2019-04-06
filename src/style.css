@@ -1,3 +1,8 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
 .red{
     color: red;
 }
@@ -36,3 +41,53 @@
 .like__number {
     font-size: 0.8rem;
 }
+
+.boxContainer{
+    width: 1354px;
+    height: 600px;
+    background-image: url(/image/Bckg\ rs.png);
+    background-size: 100%;
+}
+
+input, button{
+    margin: 5px;
+}
+
+img{
+    margin: 50px 100px 200px 150px;
+}
+
+.textSign{
+    margin: 10px 15px 20px 0;
+    color:black;
+    font-family: 'Architects Daughter', cursive;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: end;
+}
+
+.textSign h5::before{
+    content:'\f1d8';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 100;
+    font-size: 1em;
+}
+
+.inputSign{
+    font-size: 15px;
+    margin: 0 35px 0 0;
+    color:black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: center;
+}
+
+.socialBtns{
+    margin: 5px 45px 0 0;
+    color:black;
+    display: flex;
+    justify-content: center;
+   }
+
