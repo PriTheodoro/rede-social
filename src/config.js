@@ -1,4 +1,4 @@
-var config = {
+let config = {
   apiKey: "AIzaSyCtQsKuJmvf1I5BSKJ_JHt-jRbwRIkzaBE",
   authDomain: "rede-social-52d48.firebaseapp.com",
   databaseURL: "https://rede-social-52d48.firebaseio.com",

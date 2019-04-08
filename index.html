@@ -1,73 +1,115 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-    <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-database.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <script src="./src/config.js"></script>
-    <link rel="stylesheet" href="./src/style.css" />
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Viaje! Entre ou cadastre-se </title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+    crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+    crossorigin="anonymous">
+  <link href="src/style.css" rel="stylesheet" type="text/css"/>
+
 </head>
+
 <body>
-    <div class="container">
-    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">Cadastre-se</button>
-    <button type="button" class="btn btn-info" id="sign-in-google">Entre com Google</button>
-    <div class="modal fade" id="myModal" role="dialog">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h4 class="modal-title">Cadastre-se</h4>
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
+  <section class="boxContainer">
+  <div class="container.fluid" >
+    <div class="row">
+      <div class="col-md-4 col-xs-12">
+        <img src="https://media.giphy.com/media/5YgoGEKLl89jykcA9N/giphy.gif"></img>
+      </div>
+      <div class="col-md-8 col-xs-12">
+        <section class="textSign">
+          <h1>Viaje!</h1>
+          <h5> Conte sua história de viagem ou receba dicas!</h5>
+          <h5> Encontre pessoas que gostam de viajar!</h5>
+          <h5> Descubra lugares para sua próxima viajem! </h5>
+        </section>
+        <section class="inputSign">
+
+          <input type="email" class="form-control-lg" id="emailInput" placeholder="Email">
+          <input type="password" class="form-control-lg" id="passwordInput" placeholder="Senha">
+          <a type="link" href="recuperar-senha.html"><small> Esqueci minha senha</small></a>
+          <p>ENTRAR <button type="submit" class="btn btn-secundary btn-lg " id="sign-in-emailAndPassword-btn"><i
+                class="fas fa-greater-than"></i></button></p>
+          <p>Ainda não tem conta?  <button type="button" class="btn btn-md btn-secundary" data-toggle="modal"
+              data-target="#myModal">Cadastre-se</button></p>
+          <h5>ou entre com</h5>
+        </section>
+        <section class="socialBtns">
+            <button type="button" class="btn btn-lg btn-secundary" id="sign-in-google-btn"><i class="fab fa-google-plus-g"></i></button>
+            <button type="button" class="btn btn-lg btn-secundary" id="sign-in-facebook-btn"><i class="fab fa-facebook-square"></i></button>
+            <button type="button" class="btn btn-lg btn-secundary" id="sign-in-twitter-btn"><i class="fab fa-twitter-square"></i></button>
           </div>
-          <div class="modal-body">
-              <form>
-                  <div class="form-group">
-                    <label for="name-input">Nome</label>
-                    <input type="text" class="form-control" id="name-input">
-                  </div>
-                  <div class="form-group">
-                      <label for="age-input">Data de Nascimento</label>
-                      <input type="date" class="form-control" id="age-input">
-                  </div>
-                  <div class="form-group">
-                      <label for="gender-input">Gênero</label>
-                      <select id="gender-input">
-                      <option value="Female">Feminino</option>
-                      <option value="Male">Masculino</option>
-                      <option value="Other">Outro</option>
-                      </select>
-                  </div>
-                  <div class="form-group">
-                    <label for="email-input">Email</label>
-                    <input type="email" class="form-control" id="email-input" aria-describedby="emailHelp" placeholder="usuário@email.com">
-                    <small id="emailHelp" class="form-text text-muted">Nós não compartilharemos suas informações com ninguém.</small>
-                  </div>
-                  <div class="form-group">
-                    <label for="password-input0">Senha</label>
-                    <input type="password" class="form-control" id="password-input0" placeholder="********">
-                  </div>
-                  <div class="form-group">
-                      <label for="password-input">Confirme sua senha</label>
-                      <input type="password" class="form-control" id="password-input" placeholder="********">
-                      <small id="passwordHelp" class="form-text"></small>
-                    </div>
-                  <button type="button" id="sign-up-btn" class="btn btn-primary">Cadastrar</button> <small id="cadHelp" class="form-text text-muted"></small>
-                </form>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
-          </div>
+        </section>
+      </section>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Cadastre-se</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="name-input">Nome</label>
+              <input type="text" class="form-control" id="name-input">
+            </div>
+            <div class="form-group">
+              <label for="age-input">Data de Nascimento</label>
+              <input type="date" class="form-control" id="age-input">
+            </div>
+            <div class="form-group">
+              <label for="gender-input">Gênero</label>
+              <select id="gender-input">
+                <option value="Female">Feminino</option>
+                <option value="Male">Masculino</option>
+                <option value="Other">Outro</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="email-input">Email</label>
+              <input type="email" class="form-control" id="email-input" aria-describedby="emailHelp" placeholder="usuário@email.com">
+              <small id="emailHelp" class="form-text text-muted">Nós não compartilharemos suas informações com
+                ninguém.</small>
+            </div>
+            <div class="form-group">
+              <label for="password-input0">Senha</label>
+              <input type="password" class="form-control" id="password-input0" placeholder="********">
+            </div>
+            <div class="form-group">
+              <label for="password-input">Confirme sua senha</label>
+              <input type="password" class="form-control" id="password-input" placeholder="********">
+              <small id="passwordHelp" class="form-text"></small>
+            </div>
+            <button type="button" id="sign-up-btn" class="btn btn-primary">Cadastrar</button> <small id="cadHelp" class="form-text text-muted"></small>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
         </div>
       </div>
     </div>
-    
   </div>
 
-  <script src="./src/script.js"></script>
-  <script src="./src/auth.js"></script>
+  </div>
+
+  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-database.js"></script>  
+    <script src="/src/config.js"></script>
+    <script src="/src/auth.js"></script>
 </body>
+
 </html>
