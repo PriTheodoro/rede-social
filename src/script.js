@@ -94,10 +94,9 @@ function filterSelect(){
     .once('value', function (snapshot) {
       $("#post-list").html("");
       snapshot.forEach(function(childSnapshot) {
-        /*let childkey = childSnapshot.key;
+        let childkey = childSnapshot.key;
         let childData = childSnapshot.val();
-        createPost(childkey, childData.text, childData.likes);*/
-        console.log(childSnapshot.val())
+        createPost(childkey, childData.text, childData.likes);
      });
     });
   }
