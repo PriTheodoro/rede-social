@@ -1,8 +1,7 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html>
 
 <head>
-
   <meta charset="UTF-8">
   <title>Viaja!</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -10,38 +9,39 @@
   <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-auth.js"></script>
   <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-database.js"></script>
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-  crossorigin="anonymous">
-
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 </head>
 
 <body>
-
   <p> Vamos viajar?</p>
   <form>
-    <textarea name="input-post" id="input-post" cols="50" rows="10" placeholder="Fez alguma viagem? Conte-nos!"></textarea>
-    <select name="privacy" id="privacy">
-      <option value="Privado">Privado</option>
-      <option value="Publico">Público</option>
-    </select>
-    <select name="post-friends" id="post-friends">
-    </select>
-    <input type="file" placeholder="Foto/Vídeo" id="include-button">
-    <input type="submit" value="Publicar" disabled id="post-message-button">
+    <section class="form-group container">
+      <section class="row">
+        <section class="form-group col align-self-center">
+          <textarea class="form-control" name="input-post" id="input-post" cols="50" rows="5" placeholder="Fez alguma viagem? Conte-nos!"></textarea>
+        </section>
+      </section>
+    </section>
+    <section class="container row">
+      <select class="custom-select col-sm-1 col-lg-2 align-self-start" name="privacy" id="privacy">
+        <option value="Privado">Privado</option>
+        <option value="Publico">Público</option>
+      </select>
+      <input type="submit" value="Publicar" disabled="" id="post-message-button">
+    </section>
   </form>
   <span>Filtrar postagens:</span>
   <select id="filter-privacy">
+    <option value="Todos">Todos</option>
     <option value="Publico">Público</option>
     <option value="Privado">Privado</option>
   </select>
   <ul id="post-list" class="list-unstyled">
   </ul>
-  
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
   <script src="./src/config.js"></script>
   <script src="./src/script.js"></script>
-  <link rel="stylesheet" href="./src/style.css" />
-
+  <link rel="stylesheet" href="./src/style.css">
 </body>
 
 </html>
