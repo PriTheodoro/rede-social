@@ -1,9 +1,77 @@
 body{
-    margin: 0;
-    padding: 0;
-    background-image: url(/image/Bckg\ rs.png);
+    background: linear-gradient(135deg, #D99EEB 50%, #FFA6C3 50% );
     background-size: 100%;
+    font-family: 'Architects Daughter', cursive;
+    margin: 0;
 }
+
+@media ( min-width: 900px ) {
+    body {
+    background: linear-gradient(to right,#FFF014, #FAFAD2);
+    background-size: 100%;
+    font-family: 'Architects Daughter', cursive;
+    margin: 0;
+    }
+}
+.logo{
+    margin: 0 0 0 300px;
+    
+}
+.carouselSlide{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: center;
+    font-size: 150px;
+    
+}
+
+.carouselSlide img{
+    width: 400px;
+    height: 300px;
+    margin: 0 0 0 200px;
+
+}
+
+.textSign{
+    margin: 50px 100px 0 0;
+    color:black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: end;
+}
+
+.textSign h5::before{
+    content:'\f1d8';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 100;
+    font-size: 0.5em;
+}
+
+.inputSign{
+    font-size: 15px;
+    margin: 25px 100px 10px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: center;
+}
+
+.inputSign input{
+    margin: 10px;
+}
+
+.socialBtns{
+    margin: 10px 100px 0 0;
+    display: flex;
+    justify-content: center;
+}
+
+.socialBtns button{
+    margin: 10px;
+}
+
 
 .red{
     color: red;
@@ -13,44 +81,35 @@ body{
     color: blue;
 }
 
-input, button{
-    margin: 5px;
-}
-
-img{
-    margin: 50px 100px 200px 150px;
-}
-
-.textSign{
-    margin: 10px 15px 20px 0;
-    color:black;
-    font-family: 'Architects Daughter', cursive;
+.like__btn {
+    border: none;
+    background-color: #e74c3c;
+    color: white;
+    cursor: pointer;
+    padding: 0.8rem;
+    border-radius: 0.4rem;
+    max-width: 200px;
+    transition: all ease 0.3s;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    align-self: end;
 }
 
-.textSign h4::before{
-    content:'\f1d8';
-    font-family: 'Font Awesome 5 Free';
-    font-weight: 100;
-    font-size: 1em;
+.like__btn:hover{
+    background-color: rgba(#e74c3c, 0.8);
 }
 
-.inputSign{
-    font-size: 15px;
-    margin: 0 35px 0 0;
-    color:black;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    align-self: center;
+.like__btn:disabled{
+    background-color: #d4cfcf;
+    cursor: pointer;
 }
 
-.socialBtns{
-    margin: 5px 45px 0 0;
-    color:black;
-    display: flex;
-    justify-content: center;
-   }
+.like__icon {
+    font-size: 1.2rem;
+    margin-right: 0.3rem;
+}
+  
+.like__number {
+    font-size: 0.8rem;
+}
+
+

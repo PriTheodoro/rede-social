@@ -19,6 +19,7 @@ $(document).ready(function () {
       });
     }
   })
+  
   $("#sign-in-emailAndPassword-btn").click(function (event) {
     event.preventDefault();
     let userEmail = $("#emailInput").val();
@@ -86,3 +87,15 @@ $(document).ready(function () {
     }
   })
 })
+
+$(document).ready(function () {
+  $("#email-new-password").click(function(event){
+    event.preventDefault();
+
+let emailAddress = $("#user-email").val();
+firebase.auth().useDeviceLanguageCode();
+firebase.auth().sendPasswordResetEmail(emailAddress).then(function() {
+  
+}).catch(function(error) {
+  
+});
