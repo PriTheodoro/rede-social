@@ -1,6 +1,13 @@
 let USER_ID = window.location.search.match(/\?id=(.*)/)[1];
 database = firebase.database();
 $(document).ready(function(){
+  database.ref('/users/' + USER_ID).once('value')
+  .then(function(snapshot) {
+    $('#img-profile').html(`
+  <img class="img-thumbnail img-size mr-0 ml-0 mt-0 mb-0" src="${snapshot.val().photoUrl}">
+  <p class="text-monospace text-center">${snapshot.val().displayName}</p>
+  `)
+  })
   database.ref('/users/' + USER_ID + '/posts/').once('value')
   .then(function(snapshot) {
     snapshot.forEach(function(childSnapshot) {
@@ -14,26 +21,30 @@ $(document).ready(function(){
   $("#filter-privacy").change(filterSelect);
 });
 function createPost(dataPost, message, likes){
+  let replaced = /\n/gi;
+  let newStr = message.replace(replaced, '<br/>');
   $("#post-list").prepend(`
-  <li>
-    <p id="post-message">${message}</p>
-    <button class="like__btn animated" data-like-id="${dataPost}">
-      <i class="like__icon fa fa-heart"></i>
-      <span class="like__number" data-like-id="${dataPost}">${likes}</span>
-    </button>
-    <button data-edit-id=${dataPost}>Editar</button>
-    <button data-del-id=${dataPost}>Apagar</button>
+  <li class="list-group-item border grey-backg mt-3" id=${dataPost}>
+  <p class="border light-pink-backg p-2" id="post-message">${newStr}</p>
+  <section class="row">
+      <button class="btn btn-light" data-edit-id=${dataPost}>Editar</button>
+      <button class="btn btn-light" data-del-id=${dataPost}>Apagar</button>
+      <button class="like__btn animated" data-like-id="${dataPost}">
+        <i class="like__icon fa fa-heart"></i>
+        <span class="like__number" data-like-id="${dataPost}">${likes}</span>
+      </button>
+    </section>
   </li>`)
   $(`button[data-del-id=${dataPost}]`).click(function() {
     let confirmDel = confirm("Confirma a exclusão da postagem?")
     if(confirmDel){
-    $(this).parent().remove();
+    $(`li[id=${dataPost}]`).remove();
     database.ref("users/" + USER_ID + "/posts/" + dataPost).remove()
     }
   })
   $(`button[data-edit-id=${dataPost}]`).click(function() {
     $("#post-message").html(`
-    <input type="text" id="input-edit" value=${message}>
+    <input class="form-control" type="text" id="input-edit" value=${message}>
     <button id="edit-save">Salvar</button>`)
     $("#edit-save").click(function(){
       let newText = $("#input-edit").val();

@@ -81,6 +81,16 @@ body{
     color: blue;
 }
 
+.img-size{
+    width: 10vw;
+}
+.light-pink-backg{
+    background-color: rgba(253, 246, 250, 0.822);
+}
+.grey-backg{
+    background-color: rgba(218, 211, 211, 0.87);
+}
+
 .like__btn {
     border: none;
     background-color: #e74c3c;
