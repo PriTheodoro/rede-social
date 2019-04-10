@@ -1,5 +1,5 @@
 body{
-    background: linear-gradient(to right,#FFF014, #FAFAD2);
+    background: linear-gradient(to right, #3D7BCC, #47FFA1);
     background-size: 100%;
     font-family: 'Architects Daughter', cursive;
     margin: 0;
@@ -7,7 +7,7 @@ body{
 
 @media ( min-width: 900px ) {
     body {
-    background: linear-gradient(to right,#FFF014, #FAFAD2);
+    background: linear-gradient(to right, #3D7BCC, #47FFA1);
     background-size: 100%;
     font-family: 'Architects Daughter', cursive;
     margin: 0;
