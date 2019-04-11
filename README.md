@@ -18,5 +18,35 @@ Ao utilizar alguns conhecimentos já adquiridos de experiência do usuário (UX)
 
 **Planejamento**
 
+![img2](https://user-images.githubusercontent.com/37125582/55923232-f270fd00-5bda-11e9-90d1-de806373e7f2.PNG)
 
+**Protótipo**
 
+O protótipo pode ser visto nesse link: https://marvelapp.com/h05e30j
+
+Todo o projeto foi elaborado com HTML, CSS, Bootstrap, jQuery e hospedado no Firebase. Todos os requisitos obrigatórios foram cumpridos:
+
+- Login com Firebase
+- Autenticação com Facebook, Google ou e-mail
+- Validações
+- Não pode haver usuários repetidos.
+- A conta do usuário deverá ter um e-mail válido.
+- O texto no input de senha deverá ser secreto.
+- Os formulários de registro ou início de sessão deverão ser validados no envio.
+- Em caso de erros, o sistema deve fornecer mensagens de erro para o usuário, para ajudá-lo a corrigir.
+- A aplicação só deve permitir o acesso a usuários com contas válidas.
+- Ao recarregar a aplicação, deve-se verificar que o usuário está logado antes de exibir conteúdo privado.
+- Poder publicar um post de texto.
+- Poder dar like em um post.
+- Exibir um contador de likes.
+- Poder apagar um post específico.
+- Poder filtrar posts públicos e posts somente para amigos.
+- Pedir confirmação antes de eliminar um post.
+- Ao clicar no botão editar, deve-se mudar o texto para um campo input que permita editar o texto.
+- Ao clicar em salvar, a exibição deve voltar a um texto normal, porém com a informação editada.
+- Ao recarregar a página, deve exibir as informação editadas/atualizadas.
+- A aplicação não deve permitir a publicação de campos vazios de nenhum tipo.
+- O usuário deve poder adicionar, editar ou apagar conteúdo de seu perfil na rede social
+- O usuário poderá definir a privacidade do que publica.
+- Ao editar conteúdo, o que foi editado deve ser visualizado automaticamente, imediatamente depois de salvar.
+- Ao recarregar a página, deve-se exibir os conteúdos editados/atualizados.
