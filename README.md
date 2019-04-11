@@ -11,3 +11,12 @@ Ao utilizar alguns conhecimentos já adquiridos de experiência do usuário (UX)
 **Cláudia** - tem 32 anos, solteira, trabalha como desenvolvedora front-end e viaja duas vezes por ano. Ela quer dicas de novos lugares para conhecer e também quer compartilhar informações dos lugares que já visitou.
 
 **Maria Célia** - tem 70 anos, casada, professora aposentada. Ela adora viajar, mas como a aposentadoria que recebe não é muita, quer dicas de pacotes econônicos de viagens, além de passagens com desconto. Ela também se interessa por avaliações de outras pessoas que viajam.
+
+**Pesquisa**
+
+![img1](https://user-images.githubusercontent.com/37125582/55923164-a625bd00-5bda-11e9-8ca1-ce519e439720.PNG)
+
+**Planejamento**
+
+
+
